@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageViewSwipePractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-lZ-pLk">
+                                <rect key="frame" x="0.0" y="144" width="414" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxY-m0-2Ez">
+                                        <rect key="frame" x="0.0" y="30" width="207" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="TYN-rg-gDm"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wjd-Js-JPN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9x-1Q-iJV">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                                                <state key="normal" title="全ての投稿">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNq-gH-qV4">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                                                <state key="normal" title="フォロー中">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstItem="wjd-Js-JPN" firstAttribute="top" secondItem="gwE-lZ-pLk" secondAttribute="top" id="Bwf-RC-suB"/>
+                                    <constraint firstItem="wjd-Js-JPN" firstAttribute="leading" secondItem="gwE-lZ-pLk" secondAttribute="leading" id="FpJ-Ky-HOn"/>
+                                    <constraint firstAttribute="bottom" secondItem="wjd-Js-JPN" secondAttribute="bottom" id="HnJ-Jq-41N"/>
+                                    <constraint firstItem="zxY-m0-2Ez" firstAttribute="width" secondItem="gwE-lZ-pLk" secondAttribute="width" multiplier="0.5" id="J1p-ht-qxv"/>
+                                    <constraint firstAttribute="bottom" secondItem="zxY-m0-2Ez" secondAttribute="bottom" id="OmZ-z6-yzy"/>
+                                    <constraint firstAttribute="trailing" secondItem="wjd-Js-JPN" secondAttribute="trailing" id="VGi-pY-zSR"/>
+                                    <constraint firstAttribute="height" constant="40" id="WyG-1H-UU5"/>
+                                    <constraint firstItem="zxY-m0-2Ez" firstAttribute="leading" secondItem="gwE-lZ-pLk" secondAttribute="leading" id="aBc-RI-XTZ"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qN-XG-xIW">
+                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
+                                <connections>
+                                    <segue destination="049-Jc-kQQ" kind="embed" id="Ymv-Fr-grf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1qN-XG-xIW" secondAttribute="trailing" id="47J-lA-x4G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gwE-lZ-pLk" secondAttribute="trailing" id="BWW-7f-ZhV"/>
+                            <constraint firstItem="1qN-XG-xIW" firstAttribute="top" secondItem="gwE-lZ-pLk" secondAttribute="bottom" id="D8c-wQ-tuh"/>
+                            <constraint firstItem="gwE-lZ-pLk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bv3-94-suv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1qN-XG-xIW" secondAttribute="bottom" id="eBw-tV-yP7"/>
+                            <constraint firstItem="1qN-XG-xIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eWR-oE-bSn"/>
+                            <constraint firstItem="gwE-lZ-pLk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oko-wx-spV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="1qN-XG-xIW" id="C7F-vK-8su"/>
+                        <outlet property="selectedMarkView" destination="zxY-m0-2Ez" id="Hvr-gS-1fB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="106"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="0jS-Qg-T9l">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="049-Jc-kQQ" customClass="PageViewController" customModule="PageViewSwipePractice" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5B4-gL-Bkv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1077" y="106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
